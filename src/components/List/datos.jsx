@@ -40,7 +40,11 @@ const itemComprado = (item) => {
 const renderItem = ({item}) =>(
     <View style ={Style.renderItem}>
         <Text style ={Style.ItemStyle}>{item.name}</Text>
-        <Button title='Borar' onPress={()=>setModalItem(item)}></Button>
+       <TouchableOpacity style= {Style.BotonBorrar} onPress={()=>setModalItem(item)} >
+        <Text>
+            Borrar
+        </Text>
+       </TouchableOpacity>
         <TouchableOpacity onPress={ ()=> itemComprado(item)} style ={ item.Comprado ? (Style.ButtonStyleOn):(Style.ButtonStyleOff) }>
         <Text style = {Style.textButtonList}>Comprado</Text>
         </TouchableOpacity>

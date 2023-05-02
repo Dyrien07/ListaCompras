@@ -38,18 +38,26 @@ ModalContainer: {
     alignItems: "center",
 },
 ButtonStyleOff :{
-    backgroundColor : "red",
+    alignItems : "center",
+    justifyContent: "flex-end",
+    backgroundColor : "#165E8E",
     height:40,
     padding: 10,
-    margin: 10
+    margin: 10,
+    borderRadius: 10
 },
 textButtonList:{
     color: "black",
 },
 renderItem:{
     flexDirection: "row",
+    alignItems:"center",
+    justifyContent: "space-evenly",
     borderColor: "black",
-    margin: 10
+    margin: 10,
+    elevation : 1,
+    width : 350,
+    height: 100
 },
 ItemStyle: {
     height: 50, 
@@ -59,10 +67,18 @@ ItemStyle: {
 },
 
 ButtonStyleOn :{
-    backgroundColor : "green",
+    backgroundColor : "#0F7C35",
     height:40,
     padding: 10,
-    margin: 10
+    margin: 10,
+    borderRadius:10 
 },
+BotonBorrar:{
+    backgroundColor : "#932A0E",
+    height : 40,
+    padding : 10,
+    margin: 5,
+    borderRadius: 10
+}
 });
 export default styles;

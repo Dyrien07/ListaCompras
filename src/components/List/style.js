@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     },
     textButton: {
         alignItems: "center",
-        color: "white"
+        color: "white",
     },
     ContainerListData: {
         flexDirection: "row",
@@ -37,9 +37,32 @@ ModalContainer: {
     justifyContent : "center",
     alignItems: "center",
 },
-ButtonStyle :{
-    backgroundColor : "red"
-}
+ButtonStyleOff :{
+    backgroundColor : "red",
+    height:40,
+    padding: 10,
+    margin: 10
+},
+textButtonList:{
+    color: "black",
+},
+renderItem:{
+    flexDirection: "row",
+    borderColor: "black",
+    margin: 10
+},
+ItemStyle: {
+    height: 50, 
+    margin: 10,
+    padding: 10,
+    fontSize: 20,  
+},
 
+ButtonStyleOn :{
+    backgroundColor : "green",
+    height:40,
+    padding: 10,
+    margin: 10
+},
 });
 export default styles;

@@ -1,10 +1,12 @@
 import {Text, View , FlatList, Button, Modal, TouchableOpacity } from 'react-native'
 import React,  {useState} from 'react'
 import Style from "./style"
+import { useEffect } from 'react'
 
 const Datos = ({datos, setData}) => {
 const [ModalVisibility, setModalVisibility] = useState(false)
 const [ItemSelected, setItemselected] = useState({})
+const [Comprado, setComprado] = useState(false)
 
 
 const setModalItem = item => {
@@ -21,18 +23,26 @@ const setModalItem = item => {
 
 
 const itemComprado = (item) => {
-    item.Comprado = true
+    if(item.Comprado === false){
+        item.Comprado = true
+        setComprado(true)
+    }else if (item.Comprado === true){
+        item.Comprado = false
+        setComprado(false)
+    }
+
+    console.log(item.Comprado)
 }
 
 
 
 
 const renderItem = ({item}) =>(
-    <View>
-        <Text>{item.name}</Text>
+    <View style ={Style.renderItem}>
+        <Text style ={Style.ItemStyle}>{item.name}</Text>
         <Button title='Borar' onPress={()=>setModalItem(item)}></Button>
-        <TouchableOpacity>
-        <Text Style ={Style.ButtonStyle}>Comprado</Text>
+        <TouchableOpacity onPress={ ()=> itemComprado(item)} style ={ item.Comprado ? (Style.ButtonStyleOn):(Style.ButtonStyleOff) }>
+        <Text style = {Style.textButtonList}>Comprado</Text>
         </TouchableOpacity>
         <View style ={Style.ModalContainer}>
         <Modal visible = {ModalVisibility} animationType="fade" transparent ={false}  >
@@ -46,9 +56,9 @@ const renderItem = ({item}) =>(
         </View>
         </Modal>
        </View>
-       
     </View>
 )
+useEffect(()=>{},[Comprado])
 
   return (
     <View>

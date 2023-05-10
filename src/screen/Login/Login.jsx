@@ -21,7 +21,7 @@ function onChangepasswordInput(e) {
   return (
     <View style={styles.loginContainer}>
       <TextInput style={styles.textInputLogin} placeholder='Usuario' value={username} onChangeText={onChangeuserInput}></TextInput>
-      <TextInput style={styles.textInputLogin} placeholder="Clave" value={pass} onChangeText={onChangepasswordInput}></TextInput>
+      <TextInput style={styles.textInputLogin} placeholder="Clave"  secureTextEntry ={true} value={pass} onChangeText={onChangepasswordInput}></TextInput>
       <View>
           <TouchableOpacity style={styles.buttonLogin} onPress={()=>loginFuncion(username, pass)}>
             <Text style={styles.buttonLoginText} >Ingresar</Text>

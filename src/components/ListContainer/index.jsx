@@ -5,8 +5,8 @@ import List from '../List'
 
 const ListContainer = () => {
   return (
-    <View style = {styles.ListContainer}> 
-      <Text style ={styles.ListTitle}>Lista De Compra</Text>
+    <View style={styles.ListContainer}>
+      <Text style={styles.ListContainer}> Lista de Compras</Text>
       <List style></List>
     </View>
   )

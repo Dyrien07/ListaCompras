@@ -7,6 +7,8 @@ import { StyleSheet } from "react-native"
         alignItems: "center",
        marginTop: 100,
        shadowColor: "black",
+       fontFamily: "IBMPlexMono-Bold", 
+       fontSize : 20
        
     },
     ListTitle: {

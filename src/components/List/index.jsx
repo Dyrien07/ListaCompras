@@ -14,9 +14,9 @@ const onChangeText = text => {
 }
 
 const addItem = () => {
-setData(prevstate =>[...prevstate, {name : item, id: Math.random().toString(), Comprado : false }] )
-console.log(data)
+setData([...data, {name : item, id: Math.random().toString(), Comprado : false }] )
  setItem("")
+ 
 }
 
 

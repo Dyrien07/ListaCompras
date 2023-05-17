@@ -4,8 +4,11 @@ import ListContainer from './src/components/ListContainer';
 import Login from './src/screen/Login/Login';
 import { useState } from 'react';
 import {useFonts} from "expo-font"
+import { useEffect } from 'react';
+import { Dimensions } from 'react-native';
 
 export default function App() {
+
   const [Loaded] = useFonts({
     "IBMPlexMono-Bold": require("./src/assets/font/IBMPlexMono-Bold.ttf")
   })
